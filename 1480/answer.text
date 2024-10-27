@@ -1,0 +1,24 @@
+public class App {
+    public static void main(String[] args) throws Exception {
+             int array[] = {1,2,3,4};
+    }
+
+    public static int[] runningSum(int[] nums) {
+        
+        int runningNum[] = new int[nums.length];
+        int calNumber = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+
+             for (int k = 0; k <= i; k++) {
+
+                calNumber  = runningNum[i] + nums[k];
+                runningNum[i] = calNumber;
+            }
+            
+            System.out.println(Arrays.toString(runningNum));
+        }
+        
+        return runningNum;
+    }
+}
